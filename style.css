@@ -40,7 +40,6 @@ header nav{
     width: 100%;
     height: 100px;
     position: sticky;
-   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,6 +47,9 @@ header nav{
 nav .nav-rht{
     display: flex;
     gap: 2rem;
+}
+nav .menu-img{
+    display: none;
 }
 .nav-rht a{
     font-size: 0.8rem;
@@ -63,6 +65,7 @@ nav .nav-rht{
 }
 header article{
     /* padding-top: 100px; */
+    /* height: calc(100vh - 200px); */
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -148,6 +151,7 @@ article .grid-1 img{
 .coloum img{
     width:100px ;
     border-radius: 0.5rem;
+    object-fit: contain;
 }
 .coloum span{
     font-size: 2rem;
@@ -156,5 +160,60 @@ article .grid-1 img{
 }
 .coloum p{
     color: var(--Dark-grayish-blue);
-    padding-top: 1rem;
+    line-height: 25px;
+    padding-top: 0.7rem;
+}
+
+@media (min-width:375px  ) and (max-width:700px) {
+    
+    nav .nav-rht{
+    display: none;
+}
+nav .nav-lft img{
+    width: 50px;
+}
+nav .menu-img{
+    display: inline-block;
+}
+
+header article{
+    /* padding-top: 100px; */
+    /* height: calc(100vh - 200px); */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr ;
+    column-gap: 2.5rem;
+    row-gap: 2rem;
+}
+.grid-2{
+    background-color:var(--Very-dark-blue);
+    grid-column: span 2;
+    gap: 2rem;
+    order: 3;
+}
+
+.grid-3{
+    font-size: 2.2rem;
+    line-height: 2.9rem;
+    grid-column: span 2;
+} 
+
+.grid-4{
+    font-size: 1rem;
+    color: var(--Dark-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:1.5rem;
+}
+
+ .cologroup{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
 }
